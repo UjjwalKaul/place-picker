@@ -17,7 +17,7 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
   return d;
 }
 
-export function sortPlacesByDistance(places, lat, lon) {
+export default function sortPlacesByDistance(places, lat, lon) {
   const sortedPlaces = [...places];
   sortedPlaces.sort((a, b) => {
     const distanceA = calculateDistance(lat, lon, a.lat, a.lon);
